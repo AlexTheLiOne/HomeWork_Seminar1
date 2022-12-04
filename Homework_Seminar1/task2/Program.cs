@@ -6,18 +6,18 @@
 Console.Clear();
 
 Console.Write("Enter the first number: ");
-int numberA = Convert.ToInt32(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Enter the second number: ");
-int numberB = Convert.ToInt32(Console.ReadLine());
+int b = Convert.ToInt32(Console.ReadLine());
 
-int max = numberA;
-int min = numberB;
-if (numberA > numberB) min = numberB; max = numberA;
+Console.WriteLine(a); // После первого семинара я так и не смог решить эту задачу
+Console.WriteLine(b); // но смог после второго только таким способом. Но мне так и 
+if (a > b)            // непонятно как ее решать без знака $
 {
-    Console.WriteLine("max = " + max);
+    Console.WriteLine($"max = {a}, min = {b}");
 }
-if (numberB > numberA) max = numberB; min = numberA;
+else
 {
-    Console.WriteLine("max = " + max);
+    Console.WriteLine($"max = {b}, min = {a}");
 }

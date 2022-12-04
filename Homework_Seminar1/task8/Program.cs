@@ -2,7 +2,18 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.WriteLine("Enter a number: ");
+Console.Clear();
+
+Console.WriteLine("Enter a number > 1: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-while 
+int count = 1;
+
+while ()
+{
+    i = i + 2;
+}
+if (i = number) i = i + 2;
+{
+     Console.WriteLine(i + ", ");
+}
