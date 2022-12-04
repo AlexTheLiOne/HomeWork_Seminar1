@@ -3,4 +3,17 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-// Вобщем не знаю как решить)
+Console.WriteLine("Enter a number to define the third digit: ");
+int number = Convert.ToInt32(Console.ReadLine());
+while (number > 999)
+{
+    number = number / 10;
+}
+if (number < 999 && number > 99)
+{
+     Console.WriteLine(number % 10);
+}
+ else
+{
+     Console.WriteLine("No digit");
+}
