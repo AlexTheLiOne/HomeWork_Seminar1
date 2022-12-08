@@ -5,15 +5,12 @@
 Console.Clear();
 
 Console.WriteLine("Enter a number > 1: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
-int count = 1;
+int i = 2;
 
-while ()
+while (i <= n)
 {
+    Console.Write($"{i} ");
     i = i + 2;
-}
-if (i = number) i = i + 2;
-{
-     Console.WriteLine(i + ", ");
 }

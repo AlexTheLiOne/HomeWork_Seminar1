@@ -6,7 +6,7 @@
 Console.WriteLine("Enter a number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number = number / 2)
+if (number / 2)
 {
     Console.WriteLine("yes");
 }

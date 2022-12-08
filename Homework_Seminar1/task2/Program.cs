@@ -11,9 +11,9 @@ int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter the second number: ");
 int b = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(a); // После первого семинара я так и не смог решить эту задачу
-Console.WriteLine(b); // но смог после второго только таким способом. Но мне так и 
-if (a > b)            // непонятно как ее решать без знака $
+Console.WriteLine(a); 
+Console.WriteLine(b);
+if (a > b)            
 {
     Console.WriteLine($"max = {a}, min = {b}");
 }
