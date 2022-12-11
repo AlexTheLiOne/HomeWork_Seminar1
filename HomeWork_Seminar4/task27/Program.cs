@@ -5,12 +5,12 @@
 
 Console.WriteLine("Enter a number: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int min = 0;
-int max = n;
+int i = 0;
 
-while (n > min)
+while (n > 0)
 {
+    i = i + n % 10;
     n = n / 10;
 }
 
-Console.WriteLine(n);
+Console.WriteLine(i);
