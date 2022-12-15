@@ -24,5 +24,5 @@ Console.WriteLine(string.Join(", ", arr));
 arr[0] = max;
 for (int i = 0; i < arr.Length; i++)
 {
-    [xuiny takto]
+    []
 }

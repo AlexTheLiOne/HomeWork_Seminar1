@@ -34,25 +34,20 @@ bool isNumberInArray(int[] array, int findNumber)
 const int SIZE = 12;
 const int LEFTRANGE = -9;
 const int RIGHTRANGE = 9;
-
-int[] arr = GetRandomMassive(SIZE, LEFTRANGE, RIGHTRANGE);
-Console.Write(string.Join(", ", arr));
+// const int FINDNUMBER = 5;
 
 Console.WriteLine("Enter a number: ");
-int res = isNumberInArray(arr);
-Console.WriteLine(res);
+int findNumber2 = Convert.ToInt32(Console.ReadLine());
 
+int[] arr = GetRandomMassive(SIZE, LEFTRANGE, RIGHTRANGE);
+Console.Write($"[{string.Join(", ", arr)}]");
 
-
-
-
-// for (int i = 0; i < arr.Length; i++)
-
-// if (n == arr[i])
-// {
-//     Console.Write("Yes ");
-// }
-// else
-// {
-//     Console.Write("No ");
-// }
+bool result = isNumberInArray(arr, findNumber2);
+if (result == true)
+{
+    Console.WriteLine(" -> Yes");
+}
+else
+{
+    Console.WriteLine(" -> No");
+}
