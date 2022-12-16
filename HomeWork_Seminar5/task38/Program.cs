@@ -19,10 +19,21 @@ const int LEFTRANGE = 0;
 const int RIGHTRANGE = 100;
 
 int[] arr = GetRandomMassive(SIZE, LEFTRANGE, RIGHTRANGE);
-Console.WriteLine(string.Join(", ", arr));
+Console.WriteLine($"[{string.Join(", ", arr)}]");
 
-arr[0] = max;
 for (int i = 0; i < arr.Length; i++)
 {
-    []
+    
+    if (i + 1 > i)
+    {
+        int max = i + 1;
+        int min = i;
+    }
+    else
+    {
+        int max = i;
+        int min = i + 1;
+    }
+    Console.WriteLine($"{max}, {min}");
 }
+
