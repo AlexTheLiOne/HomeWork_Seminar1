@@ -15,14 +15,22 @@ int[] GetRandomArray(int size, int leftRange, int rightRange)
     return array;
 }
 
-const double SIZE = 4;
-const int LEFTRANGE = 0;
-const int RIGHTRANGE = 10;
+const int SIZE = 5;
+const int LEFTRANGE = 1;
+const int RIGHTRANGE = 9;
 
 int[] arr = GetRandomArray(SIZE, LEFTRANGE, RIGHTRANGE);
 Console.WriteLine($"[{string.Join(", ", arr)}]");
 
-if (SIZE % 2 == 0)
+int[] ray = new int[(arr.Length / 2 + arr.Length % 2)];
+
+for (int i = 0; i < arr.Length / 2; i++)
 {
-    
+    ray[i] = arr[i] * arr[arr.Length - 1 - i];
 }
+if (arr.Length % 2 == 1)
+{
+    ray[ray.Length - 1] = arr[arr.Length / 2];
+}
+
+Console.WriteLine($"[{string.Join(", ", ray)}]");
