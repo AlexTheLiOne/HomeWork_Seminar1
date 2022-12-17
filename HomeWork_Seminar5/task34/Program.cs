@@ -2,6 +2,7 @@
 
 // [345, 897, 568, 234] -> 2
 
+Console.Clear();
 double[] GetRandomMassive(int size, int leftRange, int rightRange)
 {
     double[] array = new double[size];
@@ -20,15 +21,11 @@ const int LEFTRANGE = 0;
 const int RIGHTRANGE = 999;
 
 double[] arr = GetRandomMassive(SIZE, LEFTRANGE, RIGHTRANGE);
-Console.WriteLine(string.Join(", ", arr));
+Console.WriteLine($"[{string.Join(", ", arr)}]");
 
 int count = 0;
 for (int i = 0; i < arr.Length; i++)
 {
-    
-    if (arr[i] % 2 == 1)
-    {
-        count += 1;
-    }
+    if (arr[i] % 2 == 0) count += 1;
 }   
 Console.WriteLine(count);       

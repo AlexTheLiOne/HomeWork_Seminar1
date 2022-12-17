@@ -2,6 +2,7 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
+Console.Clear();
 int[] GetRandomMassive(int size, int leftRange, int rightRange)
 {
     int[] array = new int[size];
@@ -9,7 +10,7 @@ int[] GetRandomMassive(int size, int leftRange, int rightRange)
 
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rand.Next(leftRange, rightRange);
+        array[i] = rand.Next(leftRange, rightRange + 1);
     }
 
     return array;
@@ -20,7 +21,7 @@ const int LEFTRANGE = -100;
 const int RIGHTRANGE = 100;
 
 int[] arr = GetRandomMassive(SIZE, LEFTRANGE, RIGHTRANGE);
-Console.WriteLine(string.Join(", ", arr));
+Console.WriteLine($"[{string.Join(", ", arr)}]");
 
 int sum = 0;
 for (int i = 1; i < arr.Length; i += 2)
