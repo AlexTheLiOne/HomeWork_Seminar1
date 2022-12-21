@@ -11,11 +11,14 @@ for (int i = 0; i < size; i++)
 }
 Console.WriteLine($"[{string.Join(", ", array)}]");
 
+
+
 int[] arr = new int[array.Length];
 
 for (int i = 0; i < array.Length; i++)
 {
     arr[i] = array[i];
 }
+
 Console.WriteLine($"[{string.Join(", ", arr)}]");
 
