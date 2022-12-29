@@ -3,8 +3,8 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 4
 
-Console.WriteLine("Enter a number: ");
-int n = Convert.ToInt32(Console.ReadLine());
+
+// Не догнал как ввести стоп-слово)
 
 
 
