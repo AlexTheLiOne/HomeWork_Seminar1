@@ -5,6 +5,7 @@
 // 8 4 2 4
 // 1 7 -> такого числа в массиве нет
 
+Console.Clear();
 int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int rightRange = 50)
 {
     int[,] matr = new int[rowsCount, columsCount];
@@ -23,14 +24,16 @@ int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int r
 void Task(int[,] matr)
 {
     Console.WriteLine("Enter a number: ");
-    int n = Convert.ToInt32(Console.ReadLine());
+    int a = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter a number: ");
+    int b = Convert.ToInt32(Console.ReadLine());
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            if (n == matr[i, j])
+            if (a == i && b == j)
             {
-                Console.WriteLine(n);
+                Console.WriteLine(matr[i, j]);
             }
             else
             {
@@ -52,6 +55,6 @@ void PrintMatrix(int[,] matr)
     }
 }
 
-int[,] matrix = GetRandomMatrix(3, 3, 0, 10);
+int[,] matrix = GetRandomMatrix(3, 5, 0, 10);
 PrintMatrix(matrix);
 Task(matrix);

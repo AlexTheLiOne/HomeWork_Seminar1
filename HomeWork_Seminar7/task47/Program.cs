@@ -13,16 +13,16 @@ double[,] GetMatrix(int rowsCount, int columnsCount, int leftRange=0, int rightR
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i, j] = rand.Next(leftRange, rightRange + 1);
+            matr[i, j] = rand.NextDouble() * (10.0 + 7.0) - 7.0;
         }
     }
     return matr;
 }
 
-double GetNumber(string message)
+int GetNumber(string message)
 {
     Console.WriteLine(message);
-    return Convert.ToDouble(Console.ReadLine());
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 void PrintMatrix(double[,] matr)
@@ -37,7 +37,7 @@ void PrintMatrix(double[,] matr)
     }
 }
 
-double rows = GetNumber("Enter a lines amount: ");
-double columns = GetNumber("Enter a columns amount: ");
+int rows = GetNumber("Enter rows` amount: ");
+int columns = GetNumber("Enter columns` amount: ");
 double[,] matrix = GetMatrix(rows, columns);
 PrintMatrix(matrix);
