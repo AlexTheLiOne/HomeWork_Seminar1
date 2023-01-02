@@ -27,10 +27,10 @@ int Task(int[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-          if (i == j)
-          {
+            if (j == 0)
+            {
             sum1 += matr[i, j];
-          }
+            }
         }
     }
     return sum1;
@@ -49,7 +49,7 @@ void PrintMatrix(int[,] matr)
 }
 
 
-int[,] matrix = GetRandomMatrix(4, 5, 3, 9);
+int[,] matrix = GetRandomMatrix(4, 4, 3, 9);
 PrintMatrix(matrix);
 int sum1 = Task(matrix);
 Console.WriteLine();
