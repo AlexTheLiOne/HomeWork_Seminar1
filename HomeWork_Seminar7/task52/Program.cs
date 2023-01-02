@@ -1,16 +1,9 @@
-﻿// Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
-// ​
-// Например, изначально массив
-// выглядел вот так:
+﻿// Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-// ​
-// Новый массив будет выглядеть
-// вот так:
-// 1 4 7 2
-// 5 81 2 9
-// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int rightRange = 50)
 {
@@ -27,18 +20,17 @@ int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int r
     return matr;
 }
 
-void Task(int[,] matr)
+int Task(int[,] matr)
 {
+    int sum1 = 0;
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            if ((i + 1) % 2 == 0 && (j + 1) % 2 == 0)
-            {
-                matr[i, j] = matr[i, j] * matr[i, j];
-            }
+          sum1 += i;
         }
     }
+    return sum1;
 }
 
 void PrintMatrix(int[,] matr)
@@ -53,8 +45,10 @@ void PrintMatrix(int[,] matr)
     }
 }
 
+
 int[,] matrix = GetRandomMatrix(4, 4, 3, 9);
 PrintMatrix(matrix);
-Task(matrix);
+int sum1 = Task(matrix);
 Console.WriteLine();
-PrintMatrix(matrix);
+Console.WriteLine(sum1);
+

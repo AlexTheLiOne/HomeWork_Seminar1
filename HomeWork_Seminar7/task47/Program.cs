@@ -4,14 +4,14 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-double[,] GetMatrix(double rowsCount, double columnsCount, double leftRange, double rightRange)
+double[,] GetMatrix(int rowsCount, int columnsCount, int leftRange=0, int rightRange=50)
 {
-    double[,] matr = new double[rowsCount, columsCount];
+    double[,] matr = new double[rowsCount, columnsCount];
     Random rand = new Random();
     
-    for (double i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (double j = 0; j < matr.GetLength(1); j++)
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
             matr[i, j] = rand.Next(leftRange, rightRange + 1);
         }
@@ -22,14 +22,14 @@ double[,] GetMatrix(double rowsCount, double columnsCount, double leftRange, dou
 double GetNumber(string message)
 {
     Console.WriteLine(message);
-    return Convert.ToInt32(Console.ReadLine());
+    return Convert.ToDouble(Console.ReadLine());
 }
 
 void PrintMatrix(double[,] matr)
 {
-    for (double i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (double j = 0; j < matr.GetLength(1); j++)
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
             Console.Write(matr[i, j] + " ");
         }

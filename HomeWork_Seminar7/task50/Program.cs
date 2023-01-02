@@ -1,16 +1,9 @@
-﻿// Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
-// ​
-// Например, изначально массив
-// выглядел вот так:
+﻿// Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-// ​
-// Новый массив будет выглядеть
-// вот так:
-// 1 4 7 2
-// 5 81 2 9
-// 8 4 2 4
+// 1 7 -> такого числа в массиве нет
 
 int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int rightRange = 50)
 {
@@ -29,13 +22,19 @@ int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int r
 
 void Task(int[,] matr)
 {
+    Console.WriteLine("Enter a number: ");
+    int n = Convert.ToInt32(Console.ReadLine());
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            if ((i + 1) % 2 == 0 && (j + 1) % 2 == 0)
+            if (n == matr[i, j])
             {
-                matr[i, j] = matr[i, j] * matr[i, j];
+                Console.WriteLine(n);
+            }
+            else
+            {
+                Console.WriteLine("No number");
             }
         }
     }
@@ -53,8 +52,6 @@ void PrintMatrix(int[,] matr)
     }
 }
 
-int[,] matrix = GetRandomMatrix(4, 4, 3, 9);
+int[,] matrix = GetRandomMatrix(3, 3, 0, 10);
 PrintMatrix(matrix);
 Task(matrix);
-Console.WriteLine();
-PrintMatrix(matrix);
