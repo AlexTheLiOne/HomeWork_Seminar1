@@ -5,24 +5,24 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int rightRange = 50)
+int[,] GetRandomMatrix(int rowsCount,  int columnsCount, int leftRange = 0, int rightRange = 50)
 {
-    int[,] matr = new int[rowsCount, columsCount];
+    int[,] matr = new int[rowsCount, columnsCount];
     Random rand = new Random();
     
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i, j] = rand.Next(leftRange, rightRange + 1);
+            matr[i, j] = rand.Next(leftRange, rightRange + 1);   // Подскажите как сделать каждый столбик)))
         }
     }
     return matr;
 }
 
-int Task(int[,] matr)
+double Task(int[,] matr)
 {
-    int sum = 0;
+    double sum = 0;
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
@@ -34,6 +34,12 @@ int Task(int[,] matr)
         }
     }
     return sum;
+}
+
+int GetNumber(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 void PrintMatrix(int[,] matr)
@@ -48,10 +54,12 @@ void PrintMatrix(int[,] matr)
     }
 }
 
-
-int[,] matrix = GetRandomMatrix(4, 4, 3, 9);
+int rows = GetNumber("Enter rows` amount: ");
+int columns = GetNumber("Enter columns` amount: ");
+int[,] matrix = GetRandomMatrix(rows, columns);
 PrintMatrix(matrix);
-int sum1 = Task(matrix);
+double sum1 = Task(matrix);
+double average = sum1 / rows;
 Console.WriteLine();
-Console.WriteLine(sum1);
+Console.WriteLine(average);
 
