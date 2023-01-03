@@ -4,14 +4,14 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
-double[,] GetRandomMatrix(double rowsCount,  double columsCount, double leftRange = 0, double rightRange = 50)
+int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int rightRange = 50)
 {
-    double[,] matr = new double[rowsCount, columsCount];
+    int[,] matr = new int[rowsCount, columsCount];
     Random rand = new Random();
     
-    for (double i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (double j = 0; j < matr.GetLength(1); j++)
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
             matr[i, j] = rand.Next(leftRange, rightRange + 1);
         }
@@ -19,17 +19,17 @@ double[,] GetRandomMatrix(double rowsCount,  double columsCount, double leftRang
     return matr;
 }
 
-double GetNumber(string message) // Method to get a number from console
+int GetNumber(string message) // Method to get a number from console
 {
     Console.WriteLine(message);
     return Convert.ToInt32(Console.ReadLine());
 }
 
-void PrintMatrix(double[,] matr)
+void PrintMatrix(int[,] matr)
 {
-    for (double i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (double j = 0; j < matr.GetLength(1); j++) //Как только заканчивается цикл одномерного массива...
+        for (int j = 0; j < matr.GetLength(1); j++) //Как только заканчивается цикл одномерного массива...
         {
             Console.Write(matr[i, j] + " ");
         }

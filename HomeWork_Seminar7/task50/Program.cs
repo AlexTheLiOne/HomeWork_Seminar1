@@ -23,9 +23,7 @@ int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int r
 
 void Task(int[,] matr)
 {
-    Console.WriteLine("Enter a number: ");
     int a = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Enter a number: ");
     int b = Convert.ToInt32(Console.ReadLine());
     for (int i = 0; i < matr.GetLength(0); i++)
     {
@@ -42,6 +40,11 @@ void Task(int[,] matr)
         }
     }
 }
+int GetNumber(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
 void PrintMatrix(int[,] matr)
 {
@@ -57,4 +60,6 @@ void PrintMatrix(int[,] matr)
 
 int[,] matrix = GetRandomMatrix(3, 5, 0, 10);
 PrintMatrix(matrix);
+int row = GetNumber("Enter a row: ");
+int column = GetNumber("Enter a column: ");
 Task(matrix);

@@ -14,10 +14,21 @@ double b2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter a number 4: ");
 double k2 = Convert.ToInt32(Console.ReadLine());
 
-double x = (b2 - b1) / (k1 - k2);
-double y1 = k1 * x + b1;
-double y2 = k2 * x + b2;
 
-double g = k1 * (x + b1);
-Console.WriteLine($"{y1}; {y2}");
+
+if (k1 == k2 && b1 != b2)
+{
+    Console.WriteLine("Lines are not crossed");
+}
+else
+{
+    double s = (b2 - b1) / (k1 - k2);
+    double x = k1 * s + b1;
+    double y = k2 * s + b2;
+    double g = k1 * (s + b1);
+    Console.WriteLine($"{x}; {y}");
+}
+
+
+
 

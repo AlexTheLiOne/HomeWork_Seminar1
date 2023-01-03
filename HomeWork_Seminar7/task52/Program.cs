@@ -22,18 +22,18 @@ int[,] GetRandomMatrix(int rowsCount,  int columsCount, int leftRange = 0, int r
 
 int Task(int[,] matr)
 {
-    int sum1 = 0;
+    int sum = 0;
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
             if (j == 0)
             {
-            sum1 += matr[i, j];
+            sum += matr[i, j];
             }
         }
     }
-    return sum1;
+    return sum;
 }
 
 void PrintMatrix(int[,] matr)
