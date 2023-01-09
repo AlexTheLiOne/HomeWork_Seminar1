@@ -50,7 +50,7 @@ void PrintMatrix(int[,] matr)
 
 int[,] MultMatrix (int[,] matrixOne, int[,] matrixTwo)
 {
-    int[,] multMatrix = new int[i, j];
+    int[,] multMatrix = new int[matrixOne.GetLength(0), matrixOne.GetLength(1)];
     for (int i = 0; i < matrixOne.GetLength(0); i++)
     {
         for (int j = 0; j < matrixOne.GetLength(1); j++)

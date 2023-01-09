@@ -41,18 +41,22 @@ void PrintMatrix(int[,] matr)
     }
 }
 
-void Replace(int[,] matr, int[,] matrixRez)
+int[,] Replace(int[,] matr, int[,] matrixRez)
 {
+    int[,] matrix = new int[matr.GetLength(0), matr.GetLength(1)];
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            if (j + 1 < j)
+            int min = matr[i, j];
+            if (matr[i, j] > matr[i + 1, j + 1])
             {
-                matr[i] = j + 1;
+                matr[i + 1, j + 1] = min;
+                matr[i, j] = min;
             }
         }
     }
+    return matrix;
 }
 
 int rows = GetNumber("Enter a rows number: ");
@@ -60,5 +64,6 @@ int columns = GetNumber("Enter a columns number: ");
 int[,] matrix = GetRandomMatrix(rows, columns);
 PrintMatrix(matrix);
 Console.WriteLine();
-Replace(matrix);
+int[,] matrixRez = new int[rows, columns];
+Replace(matrix, matrixRez);
 PrintMatrix(matrixRez);
